@@ -6,8 +6,117 @@
     <title>Spike 3</title>
   </head>
   <body>
-    hoi
+    <section>
+      <div class="links">
+        <h1 data-text="Grow">Planten</h1>
+        <h2>Kerstboom</h2>
+        <p>
+          Een kerstboom is een naaldboom die traditioneel voor Kerstmis in huis
+          wordt gehaald en met kaarsjes, ballen, slingers, engelenhaar,
+          uiteenlopende decoratieve figuren zoals engelen, rendieren, pakjes, en
+          eventueel een piek wordt versierd. De traditie van de kerstboom is
+          allengs uitgebreid tot verlichte en versierde bomen op pleinen en in
+          parken, straten en tuinen.
+        </p>
+      </div>
+      <div class="rechts">
+        <img
+          src="kerstboom.jpeg"
+          alt="afbeelding van een kerstboom"
+          height="830"
+          width="830"
+        />
+      </div>
+    </section>
   </body>
 </html>
 
-<style></style>
+<style>
+  @font-face {
+    font-family: "Decovar Regular24";
+    src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Decovar-VF.ttf");
+  }
+
+  html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  section {
+    height: 50vw;
+    max-width: 90vw;
+    border: solid 0.2rem black;
+    display: flex;
+    padding: 2rem;
+    margin-top: 25vh;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+  }
+
+  .rechts {
+    padding-left: 1rem;
+  }
+
+  h1 {
+    letter-spacing: 0.6rem;
+    margin: 0;
+    font-size: 10vw;
+    font-weight: 400;
+
+    /* // Variable font */
+    font-family: "Decovar Regular24";
+    font-variation-settings: "INLN" 750, "SWRM" 0, "SSTR" 0;
+
+    /* // Background clip to image */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/209708058_b5a5fb07a6_o.jpg);
+    background-size: 30%;
+    background-repeat: repeat;
+  }
+
+  section:hover h1 {
+    animation: grow 1s linear infinite alternate;
+  }
+
+  @keyframes grow {
+    0% {
+      font-variation-settings: "INLN" 750, "SWRM" 0, "SSTR" 0, "TSHR" 0,
+        "TBIF" 0;
+    }
+
+    100% {
+      font-variation-settings: "INLN" 750, "SWRM" 1000, "SSTR" 100, "TSHR" 200,
+        "TBIF" 1000;
+    }
+  }
+
+  h2 {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    padding-bottom: 1rem;
+  }
+
+  p {
+    max-width: 45vw;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+</style>
+
+<script defer></script>
